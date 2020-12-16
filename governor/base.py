@@ -121,6 +121,7 @@ class GovernorBase(CharmBase):
             "model": model_name,
             "governor-charm": self.model.app.name,
         }
+
         with open("/var/snap/governor-broker/common/creds.yaml", "w") as creds_file:
             creds_file.write(yaml.dump(creds))
 
